@@ -1,0 +1,125 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.configurador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.vista-previa {
+    position: relative;
+    width: 400px;
+    height: 250px;
+}
+
+.parte-moño {
+    position: absolute;
+    background-size: cover; /* Asegura que la tela cubra toda la parte */
+    background-position: center;
+    /* Propiedad clave: usa la imagen PNG para enmascarar la tela */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+/* --- Posición y máscara para cada parte (AJUSTA ESTOS VALORES) --- */
+#nudo {
+    width: 80px;
+    height: 100px;
+    top: 75px;
+    left: 160px;
+    z-index: 3; /* El nudo va por encima de todo */
+    -webkit-mask-image: url('assets/base/nudo.png');
+    mask-image: url('assets/base/nudo.png');
+}
+
+#ala-izquierda {
+    width: 180px;
+    height: 180px;
+    top: 35px;
+    left: 20px;
+    z-index: 2;
+    -webkit-mask-image: url('assets/base/ala-izquierda.png');
+    mask-image: url('assets/base/ala-izquierda.png');
+}
+
+#ala-derecha {
+    width: 180px;
+    height: 180px;
+    top: 35px;
+    left: 200px;
+    z-index: 2;
+    -webkit-mask-image: url('assets/base/ala-derecha.png');
+    mask-image: url('assets/base/ala-derecha.png');
+}
+/* ------------------------------------------------------------------ */
+
+.controles {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.seccion-control {
+    margin-bottom: 20px;
+}
+
+.seccion-control label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.opciones-tela {
+    display: flex;
+    gap: 10px;
+}
+
+.opcion-tela {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    object-fit: cover;
+}
+
+.opcion-tela:hover {
+    transform: scale(1.1);
+}
+
+.opcion-tela.active {
+    border-color: #007bff;
+}
+
+#boton-resumen {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.resumen-pedido {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
