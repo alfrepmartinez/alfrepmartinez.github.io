@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseña tu Moño Personalizado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🎨 Diseña tu Propio Moño 🎨</h1>
+    <p>Selecciona la tela para cada parte del moño y crea una combinación única.</p>
+
+    <div class="configurador">
+        <div id="vista-previa" class="vista-previa">
+            <div id="ala-izquierda" class="parte-moño"></div>
+            <div id="ala-derecha" class="parte-moño"></div>
+            <div id="nudo" class="parte-moño"></div>
+        </div>
+
+        <div id="controles" class="controles">
+            <h2>Elige tus telas:</h2>
+
+            <div class="seccion-control">
+                <label>Nudo:</label>
+                <div class="opciones-tela">
+                    <img src="assets/telas/tela_roja_puntos.jpg" data-parte="nudo" data-tela="tela_roja_puntos.jpg" class="opcion-tela active">
+                    <img src="assets/telas/tela_azul_rayas.jpg" data-parte="nudo" data-tela="tela_azul_rayas.jpg" class="opcion-tela">
+                    <img src="assets/telas/tela_verde_cuadros.jpg" data-parte="nudo" data-tela="tela_verde_cuadros.jpg" class="opcion-tela">
+                </div>
+            </div>
+
+            <div class="seccion-control">
+                <label>Ala Izquierda:</label>
+                <div class="opciones-tela">
+                    <img src="assets/telas/tela_roja_puntos.jpg" data-parte="ala-izquierda" data-tela="tela_roja_puntos.jpg" class="opcion-tela active">
+                    <img src="assets/telas/tela_azul_rayas.jpg" data-parte="ala-izquierda" data-tela="tela_azul_rayas.jpg" class="opcion-tela">
+                    <img src="assets/telas/tela_verde_cuadros.jpg" data-parte="ala-izquierda" data-tela="tela_verde_cuadros.jpg" class="opcion-tela">
+                </div>
+            </div>
+            
+            <div class="seccion-control">
+                <label>Ala Derecha:</label>
+                <div class="opciones-tela">
+                    <img src="assets/telas/tela_roja_puntos.jpg" data-parte="ala-derecha" data-tela="tela_roja_puntos.jpg" class="opcion-tela active">
+                    <img src="assets/telas/tela_azul_rayas.jpg" data-parte="ala-derecha" data-tela="tela_azul_rayas.jpg" class="opcion-tela">
+                    <img src="assets/telas/tela_verde_cuadros.jpg" data-parte="ala-derecha" data-tela="tela_verde_cuadros.jpg" class="opcion-tela">
+                </div>
+            </div>
+            
+            <button id="boton-resumen">¡Listo! Generar Resumen</button>
+            <div id="resumen-pedido" class="resumen-pedido"></div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
